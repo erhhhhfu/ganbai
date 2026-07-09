@@ -3,335 +3,118 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>乾杯跟我 — 行銷課副課長／專案經理 職缺對應經歷</title>
-
+<title>行銷企劃與專案經歷</title>
 <style>
   :root {
-    /* 乾杯品牌色調萃取 */
-    --red: #D3212C;
-    --black: #111111;
-    --yellow: #fcc920; /* 取自您提供的圖片黃色 */
-    --paper: #f4f0e6;
-    --line: #111111;
-    --ink: #111111;
-    --ink-soft: #444444;
+    --black: #000000;
+    --yellow: #FFD700;
+    --paper: #ffffff;
+    --ink: #000000;
   }
   * { box-sizing: border-box; }
-  html, body { margin: 0; padding: 0; }
   body {
     background: var(--paper);
     color: var(--ink);
-    font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
-    line-height: 1.7;
-    /* 增加一點點粗糙的背景網點感 */
-    background-image: radial-gradient(#d5cebe 1px, transparent 1px);
-    background-size: 20px 20px;
+    font-family: "Noto Sans TC", sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
   }
-  ::selection { background: var(--black); color: var(--yellow); }
+  
+  .wrap { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
 
-  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px 100px; }
-
-  /* ---------- HEADER (陽剛、熱情、大膽) ---------- */
+  /* Header */
   header {
-    background: var(--black);
-    color: #f4ede1;
-    padding: 60px 24px 50px;
-    position: relative;
-    border-bottom: 8px solid var(--yellow);
+    border-bottom: 4px solid var(--black);
+    padding-bottom: 30px;
+    margin-bottom: 40px;
   }
-  .header-inner { max-width: 1040px; margin: 0 auto; text-align: center; position: relative; z-index: 1; }
-  
-  .logo {
-    max-height: 120px;
-    margin-bottom: 24px;
-    object-fit: contain;
-  }
+  .title { font-size: 36px; font-weight: 900; margin: 0; text-transform: uppercase; }
+  .subtitle { font-size: 18px; font-weight: 700; margin-top: 10px; color: #555; }
 
-  .kicker {
-    display: inline-block;
-    font-size: 14px;
-    letter-spacing: .2em;
-    color: var(--black);
-    background: var(--yellow);
-    font-weight: 900;
-    margin-bottom: 20px;
-    padding: 6px 16px;
-    border: 2px solid var(--yellow);
-  }
-  h1.title {
-    font-size: 52px;
-    font-weight: 900;
-    margin: 0 0 16px;
-    color: #fff;
-    letter-spacing: .05em;
-    text-shadow: 4px 4px 0 var(--red); /* 粗獷的陰影 */
-  }
-  h1.title .accent { color: var(--yellow); }
-  .subtitle {
-    font-size: 18px;
-    color: #fff;
-    margin-bottom: 32px;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-  }
-  
-  .tags { display: flex; justify-content: center; flex-wrap: wrap; gap: 14px; }
-  .tag {
-    font-size: 15px;
-    font-weight: 900;
-    padding: 8px 20px;
-    background: var(--yellow);
-    color: var(--black);
-    border: 3px solid var(--black);
-    box-shadow: 4px 4px 0 var(--red); /* 撞色陰影 */
-    text-transform: uppercase;
-    transition: transform 0.1s;
-  }
-  .tag:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--red); }
-
-  /* ---------- CARDS ---------- */
-  section.cards { margin-top: 64px; display: flex; flex-direction: column; gap: 48px; }
-
+  /* Sections */
   .card {
-    display: flex;
-    background: #fff;
-    border: 4px solid var(--black);
-    box-shadow: 12px 12px 0 var(--black); /* 硬派陰影 */
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-  .card:hover {
-    transform: translate(-4px, -4px);
-    box-shadow: 16px 16px 0 var(--black);
-  }
-  .card.reverse { flex-direction: row-reverse; }
-  @media (max-width: 760px) {
-    .card, .card.reverse { flex-direction: column; }
-    .card { box-shadow: 6px 6px 0 var(--black); }
-    .card:hover { transform: none; box-shadow: 6px 6px 0 var(--black); }
-  }
-
-  .card-text { flex: 1.2; padding: 40px; min-width: 0; display: flex; flex-direction: column; justify-content: center; }
-  .card-media {
-    flex: 1;
-    background: var(--yellow);
-    border-left: 4px solid var(--black);
-    display: flex; align-items: center; justify-content: center;
-    padding: 24px; min-height: 350px;
-  }
-  .card.reverse .card-media { border-left: none; border-right: 4px solid var(--black); background: var(--red); }
-  
-  /* 影音與圖片容器 - 去除圓角，加上硬邊框 */
-  .media-container {
-    width: 100%;
-    border: 4px solid var(--black);
-    box-shadow: 6px 6px 0 rgba(0,0,0,0.2);
-    background: #000;
-  }
-  .video-wrapper {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%;
-    height: 0;
-  }
-  .video-wrapper iframe {
-    position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;
-  }
-  .img-wrapper { width: 100%; height: 100%; display: flex; }
-  .img-wrapper img { width: 100%; height: 100%; object-fit: cover; max-height: 350px; display: block; }
-
-  /* 大字體、黃字、黑底的區塊標籤 */
-  .pill {
-    align-self: flex-start;
-    display: inline-block;
-    font-size: 18px;
-    font-weight: 900;
-    color: var(--yellow);
-    background: var(--black);
-    padding: 8px 18px;
-    margin-bottom: 20px;
     border: 3px solid var(--black);
-    box-shadow: 4px 4px 0 var(--red);
-    letter-spacing: .05em;
+    padding: 24px;
+    margin-bottom: 30px;
+    box-shadow: 8px 8px 0px 0px var(--black);
+  }
+
+  .pill {
+    display: inline-block;
+    background: var(--yellow);
+    color: var(--black);
+    font-weight: 900;
+    padding: 4px 12px;
+    border: 2px solid var(--black);
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+
+  h2 { font-size: 22px; margin: 0 0 15px; }
+
+  ul { list-style: none; padding: 0; }
+  li { margin-bottom: 10px; font-weight: 500; }
+  li::before { content: "■ "; color: var(--yellow); }
+
+  .media-container {
+    margin-top: 20px;
+    border: 3px solid var(--black);
+    background: #eee;
+    width: 100%;
+    aspect-ratio: 16 / 9;
   }
   
-  .card-title {
-    font-size: 28px;
-    font-weight: 900;
-    color: var(--black);
-    margin: 0 0 24px;
-    line-height: 1.4;
-  }
+  iframe { width: 100%; height: 100%; }
 
-  ul.bullets { list-style: none; margin: 0; padding: 0; }
-  ul.bullets li {
-    position: relative;
-    padding-left: 26px;
-    margin-bottom: 16px;
-    font-size: 16px;
-    color: var(--ink);
-    text-align: justify;
-    font-weight: 500;
-  }
-  ul.bullets li::before {
-    content: "■"; /* 改用方形符號，更陽剛 */
-    position: absolute;
-    left: 0;
-    top: 2px;
-    color: var(--red);
-    font-size: 14px;
-  }
-  ul.bullets li b {
-    color: var(--black);
-    font-weight: 900;
-  }
-
-  /* ---------- FOOTER ---------- */
-  footer {
-    margin-top: 80px;
-    text-align: center;
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--ink-soft);
-    padding: 32px 0;
-    border-top: 4px solid var(--black);
-  }
-
-  @media print {
-    header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-    .card-media { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  }
 </style>
 </head>
 <body>
 
-<header>
-  <div class="header-inner">
-    <!-- 加入乾杯 LOGO (對應您的上傳圖片) -->
-    <img src="https://duk.tw/zhcTni.png" alt="乾杯 LOGO" class="logo">
-    
-    <div><span class="kicker">CANDIDATE PROFILE</span></div>
-    <h1 class="title">乾杯<span class="accent">行銷</span>副課長</h1>
-    <div class="subtitle">這些關於董兒馥，以及我可以 </div>
-    <div class="tags">
-      <span class="tag">品牌行銷策略</span>
-      <span class="tag">社群與數位行銷</span>
-      <span class="tag">CRM 會員經營</span>
-      <span class="tag">跨部門專案管理</span>
+<div class="wrap">
+  <header>
+    <h1 class="title">Marketing Portfolio</h1>
+    <div class="subtitle">行銷企劃與專案管理經歷</div>
+  </header>
+
+  <!-- Section 1 -->
+  <div class="card">
+    <div class="pill">品牌行銷策略規劃</div>
+    <h2>敏捷行銷策略：提升產品銷售</h2>
+    <ul>
+      <li>針對疫情期間調整內容架構，成功轉譯品牌訊息。</li>
+      <li>透過消費者心理洞察，維持社群高黏著度。</li>
+      <li>優化 CPC、CPM 指標，確保品牌心佔率。</li>
+    </ul>
+    <div class="media-container">
+      <iframe src="https://www.youtube.com/embed/ndX6hAbyPK0?autoplay=1&mute=1&loop=1&playsinline=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
   </div>
-</header>
 
-<div class="wrap">
-
-  <section class="cards">
-
-    <div class="card">
-      <div class="card-text">
-        <span class="pill">｜關於品牌行銷策略規劃與執行｜</span>
-        <h2 class="card-title">時事行銷社群造活動引發熱度</h2>
-        <ul class="bullets">
-          <li><b>專案：</b> SUNMAI疫情下的陪伴（夢之怪物代理商）</li>
-          <li><b>負責角色：</b> 社群點發想 貼文文案撰寫 影片拍攝支援</li>
-          <li><b>痛點：</b>2020 年疫情爆發，既定素材與歡聚情境已不合時宜，品牌面臨銷售下滑與社群消聲的重大危機。</li>
-          <li><b>解決方案：</b>採取游擊戰的行銷策略，針對疫情時事推出趣味素材於線上打造各種喝酒歡聚的時機點，成功將品牌訊息融入消費者生活。透過拆解產品賣點，將產品核心賣點重新包裝為趣味社群活動。</li>
-          <li><b>成果與數據：</b>後續管理媒體投放預算，透過數據分析優化 CPC、CPM 指標，加強產品銷售，在低迷氛圍中成功確保品牌溫度與心佔率。</li>
-        </ul>
-      </div>
-      <div class="card-media">
-        <div class="media-container">
-          <div class="video-wrapper">
-            <!-- 加上 autoplay=1, mute=1, playsinline=1, loop=1 實現自動播放 -->
-            <iframe src="https://www.youtube.com/embed/ndX6hAbyPK0?autoplay=1&mute=1&playsinline=1&loop=1&playlist=ndX6hAbyPK0&rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
+  <!-- Section 2 -->
+  <div class="card">
+    <div class="pill">社群與數位行銷管理</div>
+    <h2>人格化經營與數據優化</h2>
+    <ul>
+      <li>社群人格化經營，化解缺貨負面觀感。</li>
+      <li>榮獲 4A 廣告獎金獎肯定，帶動實質通路銷售。</li>
+      <li>運用觀看影片分群，精準進行再行銷投放。</li>
+    </ul>
+    <div class="media-container">
+      <iframe src="https://www.youtube.com/embed/RGihYGoqGO8?autoplay=1&mute=1&loop=1&playsinline=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
+  </div>
 
-    <div class="card reverse">
-      <div class="card-text">
-        <span class="pill">｜關於社群與數位行銷管理｜</span>
-        <h2 class="card-title">小編真實互動轉譯獲 4A 金獎</h2>
-        <ul class="bullets">
-          <li><b>專案：</b> SUNMAI 鐵粉英雄（夢之怪物代理商）</li>
-          <li><b>負責角色：</b>行銷企劃</li>
-          <li><b>痛點：</b>疫情初期因市場波動導致特定酒款缺貨，商品缺貨成為品牌負面情緒，需化解品牌在零售通路的負面觀感，並增加小編好感度。</li>
-          <li><b>解決方案：</b>透過社群人格化經營，維持品牌方堅定且幽默的人物設定，以第一線導航員身份解決粉絲購酒需求。於事件當天，快速將真實互動轉譯為廣告素材，展現溫暖和快速的衝突風格。</li>
-          <li><b>成果與數據：</b>廣告榮獲 4A 廣告獎金獎肯定，並成功帶動通路產品的實質銷售轉換。</li>
-        </ul>
-      </div>
-      <div class="card-media">
-        <div class="media-container">
-          <div class="video-wrapper">
-             <!-- 加上 autoplay=1, mute=1, playsinline=1, loop=1 實現自動播放 -->
-            <iframe src="https://www.youtube.com/embed/RGihYGoqGO8?autoplay=1&mute=1&playsinline=1&loop=1&playlist=RGihYGoqGO8&rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-text">
-        <span class="pill">CRM 與會員經營</span>
-        <h2 class="card-title">數據驅動的分群溝通與銷售轉化</h2>
-        <ul class="bullets">
-          <li><b>角色：</b>近千萬的 Meta 廣告策略及投手</li>
-          <li><b>痛點解法：</b>推出各種版本的品牌影片，針對觀眾的受眾進行行為標籤化，建立階段性的再行銷溝通漏斗。</li>
-          <li><b>對應能力：</b>極高的數據判讀能力，運用媒體投放邏輯，將觀看影片的群眾進行精準分群，並透過類似受眾技術撈出最大潛在客群。再依據互動深度進行二次分群推播，藉此極大化廣告與銷售的轉換率。</li>
-        </ul>
-      </div>
-      <div class="card-media">
-        <div class="media-container">
-          <div class="img-wrapper">
-            <img src="https://duk.tw/gYRmqu.png" alt="數據與群眾互動示意">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card reverse">
-      <div class="card-text">
-        <span class="pill">關於跨部門溝通與專案管理</span>
-        <h2 class="card-title">管理展店專案，串連內外場及供應商</h2>
-        <ul class="bullets">
-          <li><b>角色：</b>饞平坊展店營運長</li>
-          <li><b>痛點：</b>需要延續品牌性念但食物及風格不同間取得平衡。另外面臨複雜的人力管理與作業流程，需一套可複製的營運模式以維持品牌水準。</li>
-          <li><b>解決方案：</b>兩年間穩定推進專案，從選址策略、組織團隊、販售商品策略定位，以及大量聯繫供應商到正式開幕。</li>
-          <li><b>對應能力：</b>非連鎖品牌兩店月營收達新台幣兩百萬元。導入 POS 與訂位系統驅動數位轉型，設計叫貨系統與 SOP，有效解決人力痛點，提升 20 人團隊協作效率與服務穩定度。</li>
-        </ul>
-      </div>
-      <div class="card-media">
-        <div class="media-container">
-          <div class="img-wrapper">
-             <img src="https://upload.cc/i1/2026/02/11/54Bxod.jpg" alt="實體展店專案照片">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-text">
-        <span class="pill">｜還有！餐飲文化敏銳度｜</span>
-        <h2 class="card-title">餐飲前線實戰與風格轉譯能力</h2>
-        <ul class="bullets">
-          <li><b>餐飲相關經驗：</b>曾任餐酒館營運長，具備從 0 到 1 的實體展店經驗、酒水搭餐企劃、供應商議價與門市營運實務背景。</li>
-          <li><b>個人興趣連結：</b>熟悉餐飲文化和消費者美學轉譯，對酒類市場具備高度商業敏銳度與行銷包裝能力，能精準對接乾杯集團之燒肉與居酒屋文化。</li>
-          <li><b>語言能力：</b>劍橋英檢中高級（等同多益 880 分），具備優秀的外語溝通與跨文化資訊吸收能力。</li>
-        </ul>
-      </div>
-      <div class="card-media">
-        <div class="media-container">
-          <div class="img-wrapper">
-             <img src="https://upload.cc/i1/2026/02/11/QaPk9x.jpg" alt="餐飲文化與搭餐體驗">
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </section>
-
-  <footer>
-    此頁面為應徵「乾杯股份有限公司｜行銷課 副課長／專案經理」職缺之自我介紹輔助整理，非正式履歷。
-  </footer>
+  <!-- Section 3 -->
+  <div class="card">
+    <div class="pill">實體展店與營運管理</div>
+    <h2>實體空間營運與 SOP 數位轉型</h2>
+    <ul>
+      <li>兩年內展店並達成月營收新台幣兩百萬元。</li>
+      <li>建置叫貨系統與 SOP，優化 20 人團隊效率。</li>
+      <li>整合 POS 與訂位系統，驅動餐飲數位化營運。</li>
+    </ul>
+  </div>
 
 </div>
 </body>
