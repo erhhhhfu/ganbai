@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>起家雞跟我 — 行銷課副課長／專案經理 職缺對應經歷</title>
+<title>起家雞跟我 — 資深行銷企劃專員 職缺對應經歷</title>
 
 <style>
   :root {
     /* 起家雞品牌色調萃取 */
-    --brand-red: #D81A21;       /* 經典起家雞紅 */
-    --brand-yellow: #FFF2C8;    /* Logo與炸雞麵衣的奶油黃 */
-    --brand-accent: #FCA311;    /* 點綴用的亮橘黃 */
-    --paper: #FFFDF8;           /* 溫暖的白底 */
-    --line: #D81A21;            /* 線條改以紅色為主 */
-    --ink: #333333;             /* 柔和的深灰色代替純黑 */
+    --brand-red: #D81A21;       
+    --brand-yellow: #FFF2C8;    
+    --brand-accent: #FCA311;    
+    --paper: #FFFDF8;           
+    --line: #D81A21;            
+    --ink: #333333;             
     --ink-soft: #666666;
   }
   * { box-sizing: border-box; }
@@ -23,20 +23,18 @@
     color: var(--ink);
     font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
     line-height: 1.7;
-    /* 改為乾淨溫暖的背景，去除原本的粗糙網點 */
   }
   ::selection { background: var(--brand-red); color: var(--brand-yellow); }
 
   .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px 100px; }
 
-  /* ---------- HEADER (親切、充滿食慾、活力) ---------- */
   header {
     background: var(--brand-red);
     color: #FFFDF8;
     padding: 60px 24px 60px;
     position: relative;
     border-bottom: 8px solid var(--brand-accent);
-    border-radius: 0 0 40px 40px; /* 增加圓潤感 */
+    border-radius: 0 0 40px 40px; 
     box-shadow: 0 8px 24px rgba(216, 26, 33, 0.15);
   }
   .header-inner { max-width: 1040px; margin: 0 auto; text-align: center; position: relative; z-index: 1; }
@@ -57,7 +55,7 @@
     font-weight: 900;
     margin-bottom: 20px;
     padding: 6px 18px;
-    border-radius: 20px; /* 圓角標籤 */
+    border-radius: 20px; 
     border: 2px solid var(--brand-yellow);
   }
   h1.title {
@@ -66,7 +64,7 @@
     margin: 0 0 16px;
     color: #fff;
     letter-spacing: .05em;
-    text-shadow: 3px 3px 0 rgba(0,0,0,0.15); /* 柔化陰影 */
+    text-shadow: 3px 3px 0 rgba(0,0,0,0.15); 
   }
   h1.title .accent { color: var(--brand-yellow); }
   .subtitle {
@@ -87,22 +85,21 @@
     color: var(--brand-red);
     border: 2px solid var(--brand-yellow);
     border-radius: 24px;
-    box-shadow: 4px 4px 0 var(--brand-accent); /* 溫暖的撞色陰影 */
+    box-shadow: 4px 4px 0 var(--brand-accent); 
     transition: transform 0.2s, box-shadow 0.2s;
   }
   .tag:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--brand-accent); }
 
-  /* ---------- CARDS ---------- */
   section.cards { margin-top: 64px; display: flex; flex-direction: column; gap: 48px; }
 
   .card {
     display: flex;
     background: #fff;
     border: 3px solid var(--brand-red);
-    border-radius: 24px; /* 圓角卡片 */
-    box-shadow: 8px 8px 0 var(--brand-yellow); /* 溫柔的色塊陰影 */
+    border-radius: 24px; 
+    box-shadow: 8px 8px 0 var(--brand-yellow); 
     transition: transform 0.2s, box-shadow 0.2s;
-    overflow: hidden; /* 確保內層圓角不突出 */
+    overflow: hidden; 
   }
   .card:hover {
     transform: translate(-4px, -4px);
@@ -125,7 +122,6 @@
   }
   .card.reverse .card-media { border-left: none; border-right: 3px solid var(--brand-red); background: #FFE8E9; }
   
-  /* 影音與圖片容器 - 加上圓角，柔化邊框 */
   .media-container {
     width: 100%;
     border: 3px solid var(--brand-red);
@@ -146,7 +142,6 @@
   .img-wrapper { width: 100%; height: 100%; display: flex; }
   .img-wrapper img { width: 100%; height: 100%; object-fit: cover; max-height: 350px; display: block; }
 
-  /* 區塊標籤 */
   .pill {
     align-self: flex-start;
     display: inline-block;
@@ -164,7 +159,7 @@
   .card-title {
     font-size: 28px;
     font-weight: 900;
-    color: var(--brand-red); /* 標題改為品牌紅 */
+    color: var(--brand-red); 
     margin: 0 0 24px;
     line-height: 1.4;
   }
@@ -180,7 +175,7 @@
     font-weight: 500;
   }
   ul.bullets li::before {
-    content: "●"; /* 改用圓形符號，更具親和力 */
+    content: "●"; 
     position: absolute;
     left: 0;
     top: 0px;
@@ -192,7 +187,6 @@
     font-weight: 900;
   }
 
-  /* ---------- FOOTER ---------- */
   footer {
     margin-top: 80px;
     text-align: center;
@@ -200,7 +194,7 @@
     font-weight: 700;
     color: var(--ink-soft);
     padding: 32px 0;
-    border-top: 3px dashed var(--brand-yellow); /* 改為虛線增加活潑感 */
+    border-top: 3px dashed var(--brand-yellow); 
   }
 
   @media print {
@@ -213,17 +207,16 @@
 
 <header>
   <div class="header-inner">
-    <!-- 替換為起家雞 LOGO -->
     <img src="image_85b3bf.png" alt="起家雞 LOGO" class="logo">
     
     <div><span class="kicker">CANDIDATE PROFILE</span></div>
-    <h1 class="title">起家雞<span class="accent">行銷</span>副課長</h1>
-    <div class="subtitle">這些關於董兒馥，以及我可以 </div>
+    <h1 class="title">起家雞<span class="accent">資深行銷</span>企劃專員</h1>
+    <div class="subtitle">這些關於董兒馥，以及我可以為好味食飲帶來的價值</div>
     <div class="tags">
-      <span class="tag">品牌行銷策略</span>
-      <span class="tag">社群與數位行銷</span>
-      <span class="tag">CRM 會員經營</span>
-      <span class="tag">跨部門專案管理</span>
+      <span class="tag">社群內容與檔期活動</span>
+      <span class="tag">廣告投放與數據優化</span>
+      <span class="tag">跨部門營運協作</span>
+      <span class="tag">餐飲品牌會員經營</span>
     </div>
   </div>
 </header>
@@ -234,14 +227,14 @@
 
     <div class="card">
       <div class="card-text">
-        <span class="pill">｜關於品牌行銷策略規劃與執行｜</span>
-        <h2 class="card-title">時事行銷社群造活動引發熱度</h2>
+        <span class="pill">｜品牌檔期活動與短影音企劃｜</span>
+        <h2 class="card-title">時事行銷社群造節引發熱度</h2>
         <ul class="bullets">
-          <li><b>專案：</b> SUNMAI疫情下的陪伴（夢之怪物代理商）</li>
-          <li><b>負責角色：</b> 社群點發想 貼文文案撰寫 影片拍攝支援</li>
+          <li><b>專案：</b> SUNMAI 疫情下的陪伴（代理商時期）</li>
+          <li><b>負責角色：</b> 品牌行銷活動規劃、社群文案撰寫、短影音拍攝支援。</li>
           <li><b>痛點：</b>2020 年疫情爆發，既定素材與歡聚情境已不合時宜，品牌面臨銷售下滑與社群消聲的重大危機。</li>
-          <li><b>解決方案：</b>採取游擊戰的行銷策略，針對疫情時事推出趣味素材於線上打造各種喝酒歡聚的時機點，成功將品牌訊息融入消費者生活。透過拆解產品賣點，將產品核心賣點重新包裝為趣味社群活動。</li>
-          <li><b>成果與數據：</b>後續管理媒體投放預算，透過數據分析優化 CPC、CPM 指標，加強產品銷售，在低迷氛圍中成功確保品牌溫度與心佔率。</li>
+          <li><b>解決方案：</b>採取游擊戰的行銷策略，針對疫情時事推出趣味素材於線上打造各種喝酒歡聚的時機點，成功將品牌訊息融入消費者生活。透過拆解產品賣點，將核心概念重新包裝為符合檔期的高互動社群活動。</li>
+          <li><b>成果與數據：</b>後續配合數位媒體預算操作，在低迷氛圍中成功確保品牌溫度與心佔率，帶動產品銷售。</li>
         </ul>
       </div>
       <div class="card-media">
@@ -255,14 +248,14 @@
 
     <div class="card reverse">
       <div class="card-text">
-        <span class="pill">｜關於社群與數位行銷管理｜</span>
-        <h2 class="card-title">小編真實互動轉譯獲 4A 金獎</h2>
+        <span class="pill">｜社群日常經營與公關危機處理｜</span>
+        <h2 class="card-title">社群真實互動轉譯獲 4A 金獎</h2>
         <ul class="bullets">
-          <li><b>專案：</b> SUNMAI 鐵粉英雄（夢之怪物代理商）</li>
-          <li><b>負責角色：</b>行銷企劃</li>
-          <li><b>痛點：</b>疫情初期因市場波動導致特定酒款缺貨，商品缺貨成為品牌負面情緒，需化解品牌在零售通路的負面觀感，並增加小編好感度。</li>
-          <li><b>解決方案：</b>透過社群人格化經營，維持品牌方堅定且幽默的人物設定，以第一線導航員身份解決粉絲購酒需求。於事件當天，快速將真實互動轉譯為廣告素材，展現溫暖和快速的衝突風格。</li>
-          <li><b>成果與數據：</b>廣告榮獲 4A 廣告獎金獎肯定，並成功帶動通路產品的實質銷售轉換。</li>
+          <li><b>專案：</b> SUNMAI 鐵粉英雄（代理商時期）</li>
+          <li><b>負責角色：</b> 行銷企劃、Facebook / Instagram 平台經營。</li>
+          <li><b>痛點：</b>疫情初期因市場波動導致特定酒款缺貨，商品缺貨成為品牌負面情緒，需化解品牌在零售通路的負面觀感。</li>
+          <li><b>解決方案：</b>透過社群人格化經營，維持品牌方堅定且幽默的人物設定，以第一線導航員身份解決粉絲購酒需求。於事件當天，快速將真實互動轉譯為創意行銷素材，展現溫暖和快速的衝突風格。</li>
+          <li><b>成果與數據：</b>廣告榮獲 4A 廣告獎金獎肯定，並成功帶動通路產品的實質銷售轉換，強化社群忠誠度。</li>
         </ul>
       </div>
       <div class="card-media">
@@ -276,12 +269,12 @@
 
     <div class="card">
       <div class="card-text">
-        <span class="pill">CRM 與會員經營</span>
+        <span class="pill">｜數位廣告投放與成效優化｜</span>
         <h2 class="card-title">數據驅動的分群溝通與銷售轉化</h2>
         <ul class="bullets">
-          <li><b>角色：</b>近千萬的 Meta 廣告策略及投手</li>
-          <li><b>痛點解法：</b>推出各種版本的品牌影片，針對觀眾的受眾進行行為標籤化，建立階段性的再行銷溝通漏斗。</li>
-          <li><b>對應能力：</b>極高的數據判讀能力，運用媒體投放邏輯，將觀看影片的群眾進行精準分群，並透過類似受眾技術撈出最大潛在客群。再依據互動深度進行二次分群推播，藉此極大化廣告與銷售的轉換率。</li>
+          <li><b>角色：</b> 近千萬預算規模之 Meta 廣告策略及投手。</li>
+          <li><b>痛點解法：</b>推出各種版本的品牌影片，針對觀眾受眾進行行為標籤化，建立階段性的再行銷溝通漏斗。</li>
+          <li><b>對應能力：</b>具備紮實的行銷數據判讀與報表整理能力。運用 Google Ads 與 Meta 媒體投放邏輯，將觀看影片的群眾進行精準分群，並透過類似受眾技術撈出最大潛在客群。再依據互動深度進行二次分群推播，藉此極大化廣告與銷售的轉換率，熟悉 CRM 分群概念。</li>
         </ul>
       </div>
       <div class="card-media">
@@ -295,13 +288,13 @@
 
     <div class="card reverse">
       <div class="card-text">
-        <span class="pill">關於跨部門溝通與專案管理</span>
-        <h2 class="card-title">管理展店專案，串連內外場及供應商</h2>
+        <span class="pill">｜跨部門溝通與營運協作｜</span>
+        <h2 class="card-title">前線營運管理，串連內外場與設計單位</h2>
         <ul class="bullets">
-          <li><b>角色：</b>饞平坊展店營運長</li>
-          <li><b>痛點：</b>需要延續品牌性念但食物及風格不同間取得平衡。另外面臨複雜的人力管理與作業流程，需一套可複製的營運模式以維持品牌水準。</li>
-          <li><b>解決方案：</b>兩年間穩定推進專案，從選址策略、組織團隊、販售商品策略定位，以及大量聯繫供應商到正式開幕。</li>
-          <li><b>對應能力：</b>非連鎖品牌兩店月營收達新台幣兩百萬元。導入 POS 與訂位系統驅動數位轉型，設計叫貨系統與 SOP，有效解決人力痛點，提升 20 人團隊協作效率與服務穩定度。</li>
+          <li><b>角色：</b> 餐酒館營運長（具兩年管理資歷）。</li>
+          <li><b>痛點：</b>需延續品牌信念但在食物及風格不同間取得平衡。面臨複雜的人力管理與作業流程，需一套可複製的營運模式以維持品牌水準。</li>
+          <li><b>解決方案：</b>兩年間穩定推進專案，從選址策略、組織團隊，到大量聯繫供應商、設計單位溝通至正式開幕。</li>
+          <li><b>對應能力：</b>非連鎖品牌兩店月營收達新台幣兩百萬元。導入 POS 與訂位系統驅動數位轉型（類會員系統概念），設計叫貨系統與 SOP，有效解決人力痛點，展現與營運單位無縫接軌的協作效率。</li>
         </ul>
       </div>
       <div class="card-media">
@@ -315,12 +308,12 @@
 
     <div class="card">
       <div class="card-text">
-        <span class="pill">｜還有！餐飲文化敏銳度｜</span>
-        <h2 class="card-title">餐飲前線實戰與風格轉譯能力</h2>
+        <span class="pill">｜7年+ 行銷與餐飲實戰經驗｜</span>
+        <h2 class="card-title">精準對接餐飲市場需求與風格轉譯</h2>
         <ul class="bullets">
-          <li><b>餐飲相關經驗：</b>曾任餐酒館營運長，具備從 0 到 1 的實體展店經驗、酒水搭餐企劃、供應商議價與門市營運實務背景。</li>
-          <li><b>個人興趣連結：</b>熟悉餐飲文化和消費者美學轉譯，對酒類市場具備高度商業敏銳度與行銷包裝能力，能精準對接起家雞之餐飲文化。</li>
-          <li><b>語言能力：</b>劍橋英檢中高級（等同多益 880 分），具備優秀的外語溝通與跨文化資訊吸收能力。</li>
+          <li><b>餐飲相關經驗：</b>累積超過七年專業經驗。具備從 0 到 1 的實體展店經驗、酒水搭餐企劃、供應商議價與門市前線營運實務背景。</li>
+          <li><b>個人優勢連結：</b>擁有紮實的心理學背景，熟悉消費者心理與美學轉譯，對餐飲市場具備高度商業敏銳度與行銷包裝能力，能第一時間掌握門市促銷專案的市場水溫。</li>
+          <li><b>語言能力：</b>劍橋英檢中高級（等同多益 880 分），能順暢進行跨文化資訊吸收。</li>
         </ul>
       </div>
       <div class="card-media">
@@ -335,7 +328,7 @@
   </section>
 
   <footer>
-    此頁面為應徵「起家雞｜行銷課 副課長／專案經理」職缺之自我介紹輔助整理，非正式履歷。
+    此頁面為應徵「好味食飲股份有限公司（起家雞）｜資深行銷企劃專員」職缺之自我介紹輔助整理，非正式履歷。
   </footer>
 
 </div>
