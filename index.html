@@ -3,18 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>起家雞跟我 — 資深行銷企劃專員 職缺對應經歷</title>
+<title>八方雲集跟我 — 品牌行銷副理／主任 職缺對應經歷</title>
 
 <style>
   :root {
-    /* 起家雞品牌色調萃取 */
-    --brand-red: #D81A21;       
-    --brand-yellow: #FFF2C8;    
-    --brand-accent: #FCA311;    
-    --paper: #FFFDF8;           
-    --line: #D81A21;            
-    --ink: #333333;             
-    --ink-soft: #666666;
+    /* 八方雲集品牌色調萃取 */
+    --brand-primary: #195E35;   /* 穩重的八方綠 */
+    --brand-secondary: #D9251E; /* 活力的八方紅 */
+    --brand-accent: #EFE9D9;    /* 溫潤的米色/麵皮色 */
+    --paper: #FAFAFA;           /* 乾淨專業的背景白 */
+    --ink: #2C2C2C;             
+    --ink-soft: #555555;
   }
   * { box-sizing: border-box; }
   html, body { margin: 0; padding: 0; }
@@ -24,109 +23,107 @@
     font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
     line-height: 1.7;
   }
-  ::selection { background: var(--brand-red); color: var(--brand-yellow); }
+  ::selection { background: var(--brand-primary); color: #FFF; }
 
   .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px 100px; }
 
+  /* ---------- HEADER (專業、大氣、穩健) ---------- */
   header {
-    background: var(--brand-red);
-    color: #FFFDF8;
-    padding: 60px 24px 60px;
+    background: var(--brand-primary);
+    color: #FFF;
+    padding: 70px 24px 60px;
     position: relative;
-    border-bottom: 8px solid var(--brand-accent);
-    border-radius: 0 0 40px 40px; 
-    box-shadow: 0 8px 24px rgba(216, 26, 33, 0.15);
+    border-bottom: 6px solid var(--brand-secondary);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
   .header-inner { max-width: 1040px; margin: 0 auto; text-align: center; position: relative; z-index: 1; }
   
   .logo {
-    max-height: 100px;
+    max-height: 90px;
     margin-bottom: 24px;
     object-fit: contain;
-    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+    background: #FFF; /* 加上白底以突顯 Logo */
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   }
 
   .kicker {
     display: inline-block;
     font-size: 14px;
     letter-spacing: .2em;
-    color: var(--brand-red);
-    background: var(--brand-yellow);
+    color: var(--brand-primary);
+    background: var(--brand-accent);
     font-weight: 900;
     margin-bottom: 20px;
     padding: 6px 18px;
-    border-radius: 20px; 
-    border: 2px solid var(--brand-yellow);
+    border-radius: 4px;
   }
   h1.title {
-    font-size: 52px;
+    font-size: 48px;
     font-weight: 900;
     margin: 0 0 16px;
     color: #fff;
     letter-spacing: .05em;
-    text-shadow: 3px 3px 0 rgba(0,0,0,0.15); 
   }
-  h1.title .accent { color: var(--brand-yellow); }
+  h1.title .accent { color: var(--brand-accent); }
   .subtitle {
     font-size: 18px;
-    color: #fff;
+    color: #EFE9D9;
     margin-bottom: 32px;
     font-weight: 700;
     letter-spacing: 0.05em;
-    opacity: 0.9;
   }
   
   .tags { display: flex; justify-content: center; flex-wrap: wrap; gap: 14px; }
   .tag {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 900;
     padding: 8px 20px;
-    background: #fff;
-    color: var(--brand-red);
-    border: 2px solid var(--brand-yellow);
-    border-radius: 24px;
-    box-shadow: 4px 4px 0 var(--brand-accent); 
-    transition: transform 0.2s, box-shadow 0.2s;
+    background: transparent;
+    color: #FFF;
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 4px;
+    letter-spacing: 0.05em;
+    transition: all 0.2s;
   }
-  .tag:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--brand-accent); }
+  .tag:hover { background: rgba(255,255,255,0.1); border-color: #FFF; }
 
+  /* ---------- CARDS ---------- */
   section.cards { margin-top: 64px; display: flex; flex-direction: column; gap: 48px; }
 
   .card {
     display: flex;
     background: #fff;
-    border: 3px solid var(--brand-red);
-    border-radius: 24px; 
-    box-shadow: 8px 8px 0 var(--brand-yellow); 
+    border: 1px solid #E0E0E0;
+    border-radius: 8px; /* 收斂圓角，提升專業度 */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     transition: transform 0.2s, box-shadow 0.2s;
     overflow: hidden; 
   }
   .card:hover {
-    transform: translate(-4px, -4px);
-    box-shadow: 12px 12px 0 var(--brand-yellow);
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
   }
   .card.reverse { flex-direction: row-reverse; }
   @media (max-width: 760px) {
     .card, .card.reverse { flex-direction: column; }
-    .card { box-shadow: 6px 6px 0 var(--brand-yellow); }
-    .card:hover { transform: none; box-shadow: 6px 6px 0 var(--brand-yellow); }
   }
 
-  .card-text { flex: 1.2; padding: 40px; min-width: 0; display: flex; flex-direction: column; justify-content: center; }
+  .card-text { flex: 1.2; padding: 48px; min-width: 0; display: flex; flex-direction: column; justify-content: center; }
   .card-media {
     flex: 1;
-    background: var(--brand-yellow);
-    border-left: 3px solid var(--brand-red);
+    background: var(--brand-accent);
     display: flex; align-items: center; justify-content: center;
-    padding: 24px; min-height: 350px;
+    padding: 32px; min-height: 350px;
+    border-left: 1px solid #EEE;
   }
-  .card.reverse .card-media { border-left: none; border-right: 3px solid var(--brand-red); background: #FFE8E9; }
+  .card.reverse .card-media { border-left: none; border-right: 1px solid #EEE; background: #FDE8E8; }
   
   .media-container {
     width: 100%;
-    border: 3px solid var(--brand-red);
-    border-radius: 16px;
-    box-shadow: 4px 4px 0 rgba(216, 26, 33, 0.15);
+    border-radius: 4px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
     background: #000;
     overflow: hidden;
   }
@@ -145,21 +142,21 @@
   .pill {
     align-self: flex-start;
     display: inline-block;
-    font-size: 16px;
-    font-weight: 900;
-    color: #fff;
-    background: var(--brand-red);
-    padding: 6px 18px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--brand-secondary);
+    background: transparent;
+    padding: 4px 12px;
     margin-bottom: 20px;
-    border-radius: 20px;
-    box-shadow: 3px 3px 0 var(--brand-accent);
+    border: 1px solid var(--brand-secondary);
+    border-radius: 4px;
     letter-spacing: .05em;
   }
   
   .card-title {
-    font-size: 28px;
+    font-size: 26px;
     font-weight: 900;
-    color: var(--brand-red); 
+    color: var(--brand-primary); 
     margin: 0 0 24px;
     line-height: 1.4;
   }
@@ -167,56 +164,53 @@
   ul.bullets { list-style: none; margin: 0; padding: 0; }
   ul.bullets li {
     position: relative;
-    padding-left: 24px;
+    padding-left: 20px;
     margin-bottom: 16px;
-    font-size: 16px;
+    font-size: 15px;
     color: var(--ink);
     text-align: justify;
-    font-weight: 500;
+    font-weight: 400;
   }
   ul.bullets li::before {
-    content: "●"; 
+    content: "■"; 
     position: absolute;
     left: 0;
-    top: 0px;
-    color: var(--brand-accent);
-    font-size: 14px;
+    top: 2px;
+    color: var(--brand-secondary);
+    font-size: 10px;
   }
   ul.bullets li b {
-    color: var(--brand-red);
-    font-weight: 900;
+    color: var(--ink);
+    font-weight: 700;
   }
 
   footer {
     margin-top: 80px;
     text-align: center;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 500;
     color: var(--ink-soft);
     padding: 32px 0;
-    border-top: 3px dashed var(--brand-yellow); 
+    border-top: 1px solid #DDD; 
   }
 
-  @media print {
-    header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-    .card-media { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  }
 </style>
 </head>
 <body>
 
 <header>
   <div class="header-inner">
-    <img src="https://duk.tw/dLyzxl.svg" alt="起家雞 LOGO" class="logo">
+    <!-- 請自行替換為八方雲集的高解析度 Logo 網址 -->
+    <img src="https://upload.wikimedia.org/wikipedia/zh/2/23/Bafang_Yunji_logo.svg" alt="八方雲集 LOGO" class="logo">
     
-    <div><span class="kicker">CANDIDATE PROFILE</span></div>
-    <h1 class="title">起家雞<span class="accent">資深行銷</span>企劃專員</h1>
-    <div class="subtitle">這些關於董兒馥，以及我可以為好味食飲帶來的價值</div>
+    <div><span class="kicker">MANAGEMENT PROFILE</span></div>
+    <h1 class="title">八方雲集<span class="accent">品牌行銷</span>副理／主任</h1>
+    <div class="subtitle">應徵者：董兒馥 ｜ 將為八方雲集帶來的營運績效與整合價值</div>
     <div class="tags">
-      <span class="tag">社群內容與檔期活動</span>
-      <span class="tag">廣告投放與數據優化</span>
-      <span class="tag">跨部門營運協作</span>
-      <span class="tag">餐飲品牌會員經營</span>
+      <span class="tag">品牌整合行銷專案</span>
+      <span class="tag">線上與線下通路串聯</span>
+      <span class="tag">跨部門溝通與營運管理</span>
+      <span class="tag">專案進度與預算控管</span>
     </div>
   </div>
 </header>
@@ -227,14 +221,14 @@
 
     <div class="card">
       <div class="card-text">
-        <span class="pill">｜品牌檔期活動與短影音企劃｜</span>
-        <h2 class="card-title">時事行銷社群造節引發熱度</h2>
+        <span class="pill">｜品牌整合行銷與預算管理｜</span>
+        <h2 class="card-title">精準操作時事行銷，嚴控預算達成營運績效</h2>
         <ul class="bullets">
-          <li><b>專案：</b> SUNMAI 疫情下的陪伴（代理商時期）</li>
-          <li><b>負責角色：</b> 品牌行銷活動規劃、社群文案撰寫、短影音拍攝支援。</li>
-          <li><b>痛點：</b>2020 年疫情爆發，既定素材與歡聚情境已不合時宜，品牌面臨銷售下滑與社群消聲的重大危機。</li>
-          <li><b>解決方案：</b>採取游擊戰的行銷策略，針對疫情時事推出趣味素材於線上打造各種喝酒歡聚的時機點，成功將品牌訊息融入消費者生活。透過拆解產品賣點，將核心概念重新包裝為符合檔期的高互動社群活動。</li>
-          <li><b>成果與數據：</b>後續配合數位媒體預算操作，在低迷氛圍中成功確保品牌溫度與心佔率，帶動產品銷售。</li>
+          <li><b>專案：</b> SUNMAI 疫情下的陪伴（代理商時期）。</li>
+          <li><b>職能展現：</b> 規劃並執行品牌整合行銷專案，掌握預算分配與社群發散效益。</li>
+          <li><b>情境與痛點：</b>疫情導致既定素材與歡聚情境不合時宜，品牌面臨實體通路銷售下滑危機。</li>
+          <li><b>解決方案：</b>採取游擊戰行銷策略，針對時事推出趣味素材，於線上打造破口。透過拆解產品賣點，將核心概念重新包裝為高互動活動，提升品牌心佔率。</li>
+          <li><b>成果與數據：</b>負責媒體投放預算管理，透過數據分析優化 CPC、CPM 等品質指標，確保專案如期完成並成功帶動產品銷售，具備極強的預算與專案進度控管能力。</li>
         </ul>
       </div>
       <div class="card-media">
@@ -248,14 +242,14 @@
 
     <div class="card reverse">
       <div class="card-text">
-        <span class="pill">｜社群日常經營與公關危機處理｜</span>
-        <h2 class="card-title">社群真實互動轉譯獲 4A 金獎</h2>
+        <span class="pill">｜內外部資源整合與品牌公關｜</span>
+        <h2 class="card-title">化解零售通路危機，斬獲 4A 金獎肯定</h2>
         <ul class="bullets">
-          <li><b>專案：</b> SUNMAI 鐵粉英雄（代理商時期）</li>
-          <li><b>負責角色：</b> 行銷企劃、Facebook / Instagram 平台經營。</li>
-          <li><b>痛點：</b>疫情初期因市場波動導致特定酒款缺貨，商品缺貨成為品牌負面情緒，需化解品牌在零售通路的負面觀感。</li>
-          <li><b>解決方案：</b>透過社群人格化經營，維持品牌方堅定且幽默的人物設定，以第一線導航員身份解決粉絲購酒需求。於事件當天，快速將真實互動轉譯為創意行銷素材，展現溫暖和快速的衝突風格。</li>
-          <li><b>成果與數據：</b>廣告榮獲 4A 廣告獎金獎肯定，並成功帶動通路產品的實質銷售轉換，強化社群忠誠度。</li>
+          <li><b>專案：</b> SUNMAI 鐵粉英雄（代理商時期）。</li>
+          <li><b>職能展現：</b> 內外部資源整合、公關危機化解與提升品牌知名度。</li>
+          <li><b>情境與痛點：</b>因市場波動導致特定產品缺貨，需化解品牌在零售實體通路的負面觀感。</li>
+          <li><b>解決方案：</b>整合線上社群與線下通路資訊，以第一線導航員身份解決消費者需求。於事件當天，快速將真實互動轉譯為創意行銷素材，展現品牌應變能力。</li>
+          <li><b>成果與數據：</b>專案榮獲 4A 廣告獎金獎，不僅實質帶動後續通路銷售轉換，更大幅提升品牌正面知名度。</li>
         </ul>
       </div>
       <div class="card-media">
@@ -269,12 +263,13 @@
 
     <div class="card">
       <div class="card-text">
-        <span class="pill">｜數位廣告投放與成效優化｜</span>
-        <h2 class="card-title">數據驅動的分群溝通與銷售轉化</h2>
+        <span class="pill">｜線上通路與數據驅動｜</span>
+        <h2 class="card-title">數據驅動的分群溝通與銷售轉化漏斗</h2>
         <ul class="bullets">
-          <li><b>角色：</b> 近千萬預算規模之 Meta 廣告策略及投手。</li>
-          <li><b>痛點解法：</b>推出各種版本的品牌影片，針對觀眾受眾進行行為標籤化，建立階段性的再行銷溝通漏斗。</li>
-          <li><b>對應能力：</b>具備紮實的行銷數據判讀與報表整理能力。運用 Google Ads 與 Meta 媒體投放邏輯，將觀看影片的群眾進行精準分群，並透過類似受眾技術撈出最大潛在客群。再依據互動深度進行二次分群推播，藉此極大化廣告與銷售的轉換率，熟悉 CRM 分群概念。</li>
+          <li><b>職能展現：</b> 數位行銷資源佈局、數據判讀優化。</li>
+          <li><b>經歷：</b> 曾負責近千萬預算規模之 Meta 廣告策略佈局與執行。</li>
+          <li><b>解決方案：</b>運用媒體投放邏輯與受眾行為標籤化，建立階段性的再行銷溝通漏斗。</li>
+          <li><b>成果與數據：</b>透過精準分群技術與類似受眾應用，撈出最大潛在客群，依互動深度進行二次推播，極大化廣告投資報酬率（ROAS），能有效將線上流量導流至線下門市或活動。</li>
         </ul>
       </div>
       <div class="card-media">
@@ -288,13 +283,13 @@
 
     <div class="card reverse">
       <div class="card-text">
-        <span class="pill">｜跨部門溝通與營運協作｜</span>
-        <h2 class="card-title">前線營運管理，串連內外場與設計單位</h2>
+        <span class="pill">｜跨部門溝通協調與線下串聯｜</span>
+        <h2 class="card-title">餐飲營運長背景：串聯內外場與供應鏈管理</h2>
         <ul class="bullets">
-          <li><b>角色：</b> 餐酒館營運長（具兩年管理資歷）。</li>
-          <li><b>痛點：</b>需延續品牌信念但在食物及風格不同間取得平衡。面臨複雜的人力管理與作業流程，需一套可複製的營運模式以維持品牌水準。</li>
-          <li><b>解決方案：</b>兩年間穩定推進專案，從選址策略、組織團隊，到大量聯繫供應商、設計單位溝通至正式開幕。</li>
-          <li><b>對應能力：</b>非連鎖品牌兩店月營收達新台幣兩百萬元。導入 POS 與訂位系統驅動數位轉型（類會員系統概念），設計叫貨系統與 SOP，有效解決人力痛點，展現與營運單位無縫接軌的協作效率。</li>
+          <li><b>職能展現：</b> 跨部門溝通協調、線下通路實務、營運績效優化。</li>
+          <li><b>經歷：</b> 餐酒館營運長（具兩年高階管理與展店資歷）。</li>
+          <li><b>解決方案：</b>面臨複雜的人力管理與標準作業流程（SOP），從零建立可複製的營運模式。主導選址、跨部門組織建立，並整合供應商及設計單位至正式開幕。</li>
+          <li><b>成果與數據：</b>兩間非連鎖品牌門市月營收達新台幣兩百萬元。導入 POS 與訂位系統驅動數位轉型，有效解決人力痛點，具備極強的跨部門（行銷、營運、採購）協作與對話能力。</li>
         </ul>
       </div>
       <div class="card-media">
@@ -308,12 +303,12 @@
 
     <div class="card">
       <div class="card-text">
-        <span class="pill">｜7年+ 行銷與餐飲實戰經驗｜</span>
-        <h2 class="card-title">精準對接餐飲市場需求與風格轉譯</h2>
+        <span class="pill">｜管理職能與市場敏銳度｜</span>
+        <h2 class="card-title">7年+ 行銷企劃與餐飲前線管理實戰</h2>
         <ul class="bullets">
-          <li><b>餐飲相關經驗：</b>累積超過七年專業經驗。具備從 0 到 1 的實體展店經驗、酒水搭餐企劃、供應商議價與門市前線營運實務背景。</li>
-          <li><b>個人優勢連結：</b>擁有紮實的心理學背景，熟悉消費者心理與美學轉譯，對餐飲市場具備高度商業敏銳度與行銷包裝能力，能第一時間掌握門市促銷專案的市場水溫。</li>
-          <li><b>語言能力：</b>劍橋英檢中高級（等同多益 880 分），能順暢進行跨文化資訊吸收。</li>
+          <li><b>產業優勢：</b> 累積超過七年行銷與餐飲營運經驗。兼具「廣告代理商的創意企劃力」與「餐飲營運長的線下實戰力」。</li>
+          <li><b>核心價值：</b> 深刻理解連鎖餐飲在「品牌行銷策動」與「門市前線執行」間常發生的落差。能以管理職視角進行跨部門溝通，確保行銷專案不僅具備聲量，更能落地成為實質的營運績效。</li>
+          <li><b>專案管理能力：</b> 擅長時程控管、供應商議價與資源配置，確保大型整合行銷專案如期如質完成。</li>
         </ul>
       </div>
       <div class="card-media">
@@ -328,7 +323,7 @@
   </section>
 
   <footer>
-    此頁面為應徵「好味食飲股份有限公司（起家雞）｜資深行銷企劃專員」職缺之自我介紹輔助整理，非正式履歷。
+    此頁面為應徵「八方雲集國際股份有限公司｜品牌行銷副理／主任」職缺之自我介紹輔助整理，非正式履歷。
   </footer>
 
 </div>
