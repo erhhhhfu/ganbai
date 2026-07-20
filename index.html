@@ -7,117 +7,112 @@
 
 <style>
   :root {
-    /* 老派/傳統企業色調 */
-    --brand-primary: #005026;   /* 沉穩傳統深綠 */
-    --brand-secondary: #C8102E; /* 經典正紅 */
-    --brand-gold: #B68A3B;      /* 企業標章金 */
-    --paper: #F4F1EA;           /* 偏暖的復古紙白 */
-    --ink: #111111;             
-    --ink-soft: #333333;
+    /* 八方雲集標準品牌色 */
+    --brand-primary: #00763A;   /* 經典鮮綠 */
+    --brand-secondary: #DA251D; /* 印章正紅 */
+    --brand-yellow: #FFC600;    /* 招牌明黃 */
+    --paper: #FFFFFF;           
+    --ink: #2C2C2C;             
+    --ink-soft: #555555;
+    --border: #EAEAEA;
   }
   * { box-sizing: border-box; }
   html, body { margin: 0; padding: 0; }
   body {
-    background: var(--paper);
+    background: #F9F9F9;
     color: var(--ink);
-    font-family: "PMingLiU", "MingLiU", "Noto Sans TC", "Microsoft JhengHei", serif; /* 加入明體增加老派正式感 */
-    line-height: 1.8;
+    font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+    line-height: 1.7;
   }
   ::selection { background: var(--brand-primary); color: #FFF; }
 
   .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px 100px; }
 
-  /* ---------- HEADER (傳統、方正、權威感) ---------- */
   header {
-    background: var(--brand-primary);
-    color: #FFF;
+    background: var(--paper);
+    color: var(--ink);
     padding: 60px 24px 50px;
     position: relative;
-    border-bottom: 8px solid var(--brand-secondary);
-    border-top: 8px solid var(--brand-gold);
+    border-top: 8px solid var(--brand-primary);
+    border-bottom: 4px solid var(--brand-yellow);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    margin-bottom: 40px;
   }
   .header-inner { max-width: 1040px; margin: 0 auto; text-align: center; position: relative; z-index: 1; }
   
   .logo {
-    max-height: 110px;
-    margin-bottom: 30px;
+    max-height: 100px;
+    margin-bottom: 24px;
     object-fit: contain;
-    background: #FFF;
-    padding: 15px 30px;
-    border: 3px solid var(--brand-gold); /* 傳統金框 */
   }
 
   .kicker {
     display: inline-block;
-    font-size: 15px;
-    letter-spacing: .3em;
-    color: var(--brand-primary);
-    background: var(--brand-gold);
+    font-size: 14px;
+    letter-spacing: .2em;
+    color: var(--paper);
+    background: var(--brand-secondary);
     font-weight: 900;
     margin-bottom: 24px;
-    padding: 6px 20px;
-    border: 1px solid #FFF;
+    padding: 6px 16px;
+    border-radius: 4px;
   }
   h1.title {
-    font-size: 46px;
+    font-size: 42px;
     font-weight: 900;
     margin: 0 0 16px;
-    color: #fff;
-    letter-spacing: .08em;
-    font-family: "Noto Sans TC", sans-serif; /* 標題保留黑體的力道 */
+    color: var(--brand-primary);
+    letter-spacing: .05em;
   }
-  h1.title .accent { color: var(--brand-gold); }
   .subtitle {
     font-size: 18px;
-    color: #FFF;
-    margin-bottom: 40px;
-    font-weight: bold;
-    letter-spacing: 0.1em;
-    border-bottom: 1px solid rgba(255,255,255,0.3);
-    padding-bottom: 16px;
-    display: inline-block;
+    color: var(--ink-soft);
+    margin-bottom: 32px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
   }
   
   .tags { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; }
   .tag {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: bold;
     padding: 8px 16px;
-    background: #FFF;
-    color: var(--brand-primary);
-    border: 2px solid var(--brand-primary);
+    background: var(--brand-yellow);
+    color: var(--ink);
+    border-radius: 20px;
     letter-spacing: 0.05em;
   }
 
-  /* ---------- CARDS ---------- */
-  section.cards { margin-top: 60px; display: flex; flex-direction: column; gap: 40px; }
+  section.cards { display: flex; flex-direction: column; gap: 40px; }
 
   .card {
     display: flex;
-    background: #fff;
-    border: 2px solid var(--brand-primary); /* 直角粗邊框 */
-    box-shadow: 6px 6px 0 var(--brand-primary); /* 早期常見的硬派色塊陰影 */
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: 8px; 
+    box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+    overflow: hidden;
   }
   .card.reverse { flex-direction: row-reverse; }
   @media (max-width: 760px) {
     .card, .card.reverse { flex-direction: column; }
-    .card { box-shadow: 4px 4px 0 var(--brand-primary); }
   }
 
   .card-text { flex: 1.2; padding: 40px; min-width: 0; display: flex; flex-direction: column; justify-content: center; }
   .card-media {
     flex: 1;
-    background: var(--paper);
+    background: #F3F8F5;
     display: flex; align-items: center; justify-content: center;
     padding: 24px; min-height: 350px;
-    border-left: 2px solid var(--brand-primary);
+    border-left: 4px solid var(--brand-primary);
   }
-  .card.reverse .card-media { border-left: none; border-right: 2px solid var(--brand-primary); }
+  .card.reverse .card-media { border-left: none; border-right: 4px solid var(--brand-primary); background: #FFF9E6;}
   
   .media-container {
     width: 100%;
-    border: 2px solid var(--ink);
-    background: #000;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
   .video-wrapper {
     position: relative;
@@ -134,56 +129,54 @@
   .pill {
     align-self: flex-start;
     display: inline-block;
-    font-size: 15px;
-    font-weight: 900;
-    color: #FFF;
-    background: var(--brand-secondary);
-    padding: 6px 16px;
-    margin-bottom: 24px;
-    border: 1px solid var(--ink);
-    letter-spacing: .1em;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--brand-primary);
+    background: #EAF3EE;
+    padding: 4px 12px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    letter-spacing: .05em;
   }
   
   .card-title {
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 900;
     color: var(--ink); 
     margin: 0 0 24px;
     line-height: 1.4;
-    font-family: "Noto Sans TC", sans-serif;
   }
 
-  ul.bullets { list-style: none; margin: 0; padding: 0; border-top: 1px solid #CCC; padding-top: 16px; }
+  ul.bullets { list-style: none; margin: 0; padding: 0; }
   ul.bullets li {
     position: relative;
-    padding-left: 24px;
+    padding-left: 20px;
     margin-bottom: 16px;
-    font-size: 16px;
+    font-size: 15px;
     color: var(--ink-soft);
     text-align: justify;
-    font-family: "Noto Sans TC", sans-serif;
   }
   ul.bullets li::before {
-    content: "◆"; /* 傳統菱形符號 */
+    content: "■"; 
     position: absolute;
     left: 0;
     top: 2px;
-    color: var(--brand-primary);
-    font-size: 12px;
+    color: var(--brand-secondary);
+    font-size: 10px;
   }
   ul.bullets li b {
     color: var(--ink);
-    font-weight: 900;
+    font-weight: 700;
   }
 
   footer {
-    margin-top: 80px;
+    margin-top: 60px;
     text-align: center;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 500;
     color: var(--ink-soft);
     padding: 32px 0;
-    border-top: 3px double var(--brand-primary); /* 傳統雙線條 */
+    border-top: 1px solid var(--border); 
   }
 </style>
 </head>
@@ -194,7 +187,7 @@
     <img src="https://shop.8way.com.tw/images/logo_m_hd.png" alt="八方雲集 LOGO" class="logo">
     
     <div><span class="kicker">MANAGEMENT PROFILE</span></div>
-    <h1 class="title">八方雲集<span class="accent">品牌行銷</span>副理／主任</h1>
+    <h1 class="title">八方雲集 品牌行銷副理／主任</h1>
     <div class="subtitle">應徵者：董兒馥 ｜ 營運績效與整合價值報告</div>
     <div class="tags">
       <span class="tag">品牌整合行銷專案</span>
